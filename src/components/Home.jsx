@@ -9,15 +9,20 @@ import Footer from "./Footer";
 
 function Home() {
   return (
+    <>
     <div>
+    <div id="home">
       <Navbar />
       <SearchBar />
       <Slider />
+    </div>
+
       <AboutUs />
       <Contact />
       <FAQs />
       <Footer />
-    </div>
+      </div>
+      </>
   );
 }
 

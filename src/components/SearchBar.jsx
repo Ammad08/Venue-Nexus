@@ -19,7 +19,8 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="rounded-t-3xl rounded-b-3xl  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500  py-8">
+    // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    <div className="rounded-t-3xl rounded-b-3xl bg-[#153448] mt-16   py-8">
       {/* Outer Wrapper with background color */}
       <div className="max-w-lg mx-auto bg-transparent p-6 rounded-2xl shadow-2xl">
         {/* Heading */}

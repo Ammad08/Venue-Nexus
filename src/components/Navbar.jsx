@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useState  } from "react";
 import { IoHome } from "react-icons/io5";
 import { GiPartyPopper } from "react-icons/gi";
 import { GiBookCover } from "react-icons/gi";
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -16,9 +18,11 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
+ 
+ 
   return (
-    <nav className="bg-slate-200 shadow-lg sticky top-0 z-50">
+    <nav id="services" className="bg-slate-200 shadow-lg fixed w-full left-0 top-0   z-50  "
+        >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -58,6 +62,10 @@ const Navbar = () => {
             <Link
               to="/"
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Home
             </Link>
@@ -70,7 +78,7 @@ const Navbar = () => {
                 Services
               </button>
               {isDropdownOpen && (
-                <div className="absolute bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500  left-0 mt-2 w-60  shadow-2xl rounded-3xl py-2 z-50">
+                <div className="absolute bg-[#153448]  left-0 mt-1 w-60  shadow-2xl rounded-3xl py-2 z-50">
                   <Link
                     to="/"
                     className="block   px-4 py-2 text-white hover:bg-gray-800"
@@ -122,12 +130,20 @@ const Navbar = () => {
             <Link
               to="/about"
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+              }}
             >
               About
             </Link>
             <Link
               to="/contact"
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md "
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Contact
             </Link>
@@ -167,10 +183,10 @@ const Navbar = () => {
             Services
           </button>
           {isDropdownOpen && (
-            <div className="space-y-1 pl-4">
+            <div className="space-y-1 pl-4 bg-[#153448] rounded-xl ">
               <Link
                 to="/all-venues"
-                className="block   px-4 py-2 text-gray-800 hover:bg-gray-100"
+                className="block   px-4 py-2 text-white hover:bg-gray-800"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -180,7 +196,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                className="block px-4 py-2 text-white hover:bg-gray-800"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -191,7 +207,7 @@ const Navbar = () => {
 
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                className="block px-4 py-2 text-white hover:bg-gray-800"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -202,7 +218,7 @@ const Navbar = () => {
 
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                className="block px-4 py-2 text-white hover:bg-gray-800"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -214,13 +230,21 @@ const Navbar = () => {
           )}
           <Link
             to="/about"
-            className="block text-gray-800 font-bold hover:bg-gray-100 rounded-md px-3 py-2"
+            className="block text-gray-800 font-bold hover:bg-white rounded-md px-3 py-2"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            }}
           >
             About
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="block text-gray-800 font-bold hover:bg-gray-100 rounded-md px-3 py-2"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Contact
           </Link>
@@ -245,3 +269,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

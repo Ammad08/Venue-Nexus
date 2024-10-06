@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div className="contact-section rounded-b-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-20 px-4">
+    // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    <div id="contact" className="contact-section rounded-b-3xl  bg-[#153448]  text-white py-20 px-4">
       <div className="max-w-2xl mx-auto px-8 text-center rounded-3xl transition-all duration-1000 transform hover:scale-105 hover:shadow-2xl animate-fadeInUp">
         <h2 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 animate-textGlow">
           Contact Us
@@ -28,7 +29,7 @@ const Contact = () => {
           <div className="flex justify-center ">
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full blur-xl opacity-75 animate-pulse"></div>
-              <Link to="/contact">
+              <Link to="/contact2">
                 <button className="relative bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 my-3 rounded-full transition-transform transform hover:scale-105 focus:outline-none">
                   Learn More
                 </button>

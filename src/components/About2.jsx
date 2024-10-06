@@ -3,7 +3,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const AboutUs = () => {
   return (
-    <section className=" relative bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-16 px-8 ">
+    // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    <section className=" relative bg-[#153448]  text-white py-16 px-8 ">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">
           <span>Welcome to </span>

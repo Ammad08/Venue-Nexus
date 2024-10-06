@@ -4,7 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const AboutUs = () => {
   return (
-    <section className=" relative rounded-t-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-16 px-8">
+    // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    <section id="about" className=" relative rounded-t-3xl bg-[#153448]  text-white py-16 px-8">
       <div className="max-w-4xl mx-auto px-8 text-center rounded-2xl shadow-2xl">
         <h1 className="text-4xl font-bold mb-6">
           <span>Welcome to </span>
@@ -28,7 +29,7 @@ const AboutUs = () => {
         <div className="flex justify-center">
           <div className="relative inline-block py-3">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full blur-xl opacity-75  animate-pulse"></div>
-            <Link to="/about">
+            <Link to="/about2">
               <button className="relative bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition-transform transform hover:scale-105 focus:outline-none">
                 Learn More
               </button>

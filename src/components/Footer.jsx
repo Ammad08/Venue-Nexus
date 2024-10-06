@@ -8,14 +8,15 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className="rounded-t-3xl  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-sans min-h-screen">
+    {/* bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 */}
+      <div className="rounded-t-3xl bg-[#153448]    text-white font-sans min-h-screen">
         <main className="flex-1 py-12 px-8 text-start justify-center">
           <div className="border-y border-gray-600">
             <div className="pt-10 flex flex-col lg:flex-row md:space-x-8 justify-start">
               <div className=" w-full  lg:w-2/5 lg:w-40%">
               <div className="flex justify-center items-center mb-4">
                 <img
-                  className=" w-40 mr-10  rounded-3xl p-2 lg:ml-10 filter brightness-100 contrast-200 shadow-2xl"
+                  className=" w-40 mr-10 bg-slate-300  rounded-3xl p-2 lg:ml-10 filter brightness-100 contrast-200 shadow-2xl"
                   src="logo1.png"
                   alt=""
                 />
@@ -59,6 +60,15 @@ const Footer = () => {
                       <Link
                         to="/"
                         className="text-gray-300 hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          // document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+                          const homeSection = document.getElementById("home");
+                          if (homeSection) {
+                            homeSection.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }}
+                        
                       >
                         Home
                       </Link>
@@ -67,6 +77,11 @@ const Footer = () => {
                       <Link
                         to="/about"
                         className="text-gray-300 hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                        }}
+                        
                       >
                         About us
                       </Link>
@@ -75,6 +90,10 @@ const Footer = () => {
                       <Link
                         to="/"
                         className="text-gray-300 hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
                         Services
                       </Link>
@@ -86,6 +105,10 @@ const Footer = () => {
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
                         Contact
                       </Link>
@@ -206,8 +229,8 @@ const Footer = () => {
             </div>
           </div>
         </main>
-        <footer className="flex justify-center text-center text-black py-6 mb-0">
-          <div className="text-pink-600">Venue Nexus</div> © All rights
+        <footer className="flex justify-center text-center text-black py-4 ">
+          <div className="text-slate-300 px-1">Venue Nexus</div> © All rights
           reserved.
         </footer>
       </div>

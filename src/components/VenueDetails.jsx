@@ -163,7 +163,7 @@ const VenueDetails = () => {
   
 
   return (
-   <div className='w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'>
+   <div className='w-full bg-slate-300'>
     <div className="bg-slate-50  p-6 rounded-xl shadow-2xl max-w-4xl mx-auto">
       <img src={venue.image} alt={venue.name} className="w-full h-64 object-cover rounded-lg" />
       <h1 className="text-3xl font-semibold  py-4">{venue.name}</h1>
