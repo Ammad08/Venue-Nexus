@@ -94,11 +94,11 @@ const Slider = () => {
   };
   return (
     <>
-      <div className="container mx-auto px-4 py-8 rounded-xl">
-        <div className="flex justify-between mx-5">
+      <div className="container mx-auto px-4 py-6 rounded-xl bg-stone-100">
+        <div className="flex justify-between mx-5 ">
           <div>
             {" "}
-            <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-3xl    font-bold mb-4 font-serif ">
+            <h2 className="text-xl   md:text-3xl lg:text-3xl xl:text-3xl    font-bold mb-4 font-serif ">
               Most Popular Venues
             </h2>{" "}
           </div>

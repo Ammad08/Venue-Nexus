@@ -20,11 +20,11 @@ const SearchBar = () => {
 
   return (
     // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
-    <div className="rounded-t-3xl rounded-b-3xl bg-[#153448] mt-16   py-8">
+    <div className=" bg-[url('searchbg.jpg')] bg-cover bg-center max-h-screen bg-[#153448] mt-16   py-8">
       {/* Outer Wrapper with background color */}
-      <div className="max-w-lg mx-auto bg-transparent p-6 rounded-2xl shadow-2xl">
+      <div className="max-w-lg mx-auto bg-white bg-opacity-40 p-6 rounded-2xl shadow-2xl">
         {/* Heading */}
-        <h1 className="text-2xl text-white font-serif font-semibold text-center mb-6">
+        <h1 className="text-3xl text-black font-serif font-semibold text-center mb-6">
           Select Your Venue
         </h1>
 
@@ -41,6 +41,8 @@ const SearchBar = () => {
             </option>
             <option value="rawalpindi">Rawalpindi</option>
             <option value="islamabad">Islamabad</option>
+
+            
           </select>
 
           {/* Select Event Type */}

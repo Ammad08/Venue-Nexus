@@ -89,7 +89,7 @@ const Allvenues = ({  }) => {
         navigate(`/venue/${id}`);
       };
     return (
-      <div className="container mx-auto px-4 bg-slate-300">
+      <div className="container mx-auto px-4 bg-slate-100">
         <h1 className="text-center  text-5xl  font-bold  font-serif py-8">All Venues</h1>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

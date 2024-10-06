@@ -1,18 +1,20 @@
 import React from "react";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import Slider from "./Slider";
 import AboutUs from "./About";
 import Contact from "./Contact";
 import FAQs from "./FAQs";
-import Footer from "./Footer";
+import WhyChooseUs from "./WhyChooseUs";
+import HowItWorks from "./HowItWorks";
+// import Footer from "./Footer";
 
 function Home() {
   return (
     <>
     <div>
     <div id="home">
-      <Navbar />
+      {/* <Navbar /> */}
       <SearchBar />
       <Slider />
     </div>
@@ -20,7 +22,9 @@ function Home() {
       <AboutUs />
       <Contact />
       <FAQs />
-      <Footer />
+      <WhyChooseUs/>
+      <HowItWorks/>
+      {/* <Footer /> */}
       </div>
       </>
   );

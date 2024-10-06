@@ -38,9 +38,9 @@ const FAQs = () => {
   ];
 
   return (
-    <main className="bg-slate-200 md:px-16 rounded-t-3xl rounded-b-3xl">
+    <main className=" bg-gradient-to-l from-slate-200 via-fuchsia-200 to-slate-200 md:px-16 rounded-t-3xl ">
       <div
-        className="xl:px-16 md:px-6 px-0 pb-10 w-full container faqs"
+        className="xl:px-16 md:px-6 px-0  w-full container faqs"
         id="faqs"
       >
         <div className="py-10">
@@ -62,25 +62,25 @@ const FAQs = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="w-full bg-white my-1 py-1 overflow-hidden rounded-xl borde border-black   hover:bg-gray-400 shadow-2xl   transition duration-500 "
+                className="w-full bg-white my-1 py-1 overflow-hidden rounded-xl borde border-black   hover:bg-gray-300 shadow-2xl   transition duration-500 "
               >
                 <div
                   className="rounded-sm w-full p-6 py-4 cursor-pointer transition-all duration-300 ease-in-out "
                   onClick={() => toggleDropdown(index)}
                 >
                   <div className="flex items-center w-full justify-between">
-                    <span className="sm:text-base font-semibold md:text-xl text-lg text-black hover:text-white ">
+                    <span className="sm:text-base font-semibold md:text-xl text-lg text-black  ">
                       {faq.question}
                     </span>
                     <div className="text-black flex items-center">
                       {openIndex === index ? (
                         <FaMinus
-                          className="text-black hover:text-white"
+                          className="text-black "
                           size={20}
                         />
                       ) : (
                         <FaPlus
-                          className="text-black hover:text-white"
+                          className="text-black "
                           size={20}
                         />
                       )}

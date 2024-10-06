@@ -8,19 +8,19 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-    {/* bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 */}
-      <div className="rounded-t-3xl bg-[#153448]    text-white font-sans min-h-screen">
+    {/* bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500   #153448*/}
+      <div className=" bg-[#153448]    text-white font-sans min-h-screen">
         <main className="flex-1 py-12 px-8 text-start justify-center">
           <div className="border-y border-gray-600">
             <div className="pt-10 flex flex-col lg:flex-row md:space-x-8 justify-start">
               <div className=" w-full  lg:w-2/5 lg:w-40%">
-              <div className="flex justify-center items-center mb-4">
+              <Link to="/" onClick={() => handleClick('home')} className="flex justify-center items-center mb-4">
                 <img
                   className=" w-40 mr-10 bg-slate-300  rounded-3xl p-2 lg:ml-10 filter brightness-100 contrast-200 shadow-2xl"
                   src="logo1.png"
                   alt=""
                 />
-                </div>
+                </Link>
                 <p className="text-lg mb-8 p-2 lg:ml-10 font-serif ">
                 Venue Nexus is your trusted platform for seamless event venue bookings. From weddings to corporate events, find the perfect venue based on your preferences, availability, and location. Explore detailed listings, compare reviews, and make informed decisions with ease. Let us help you create unforgettable moments.
                 </p>
@@ -229,7 +229,7 @@ const Footer = () => {
             </div>
           </div>
         </main>
-        <footer className="flex justify-center text-center text-black py-4 ">
+        <footer className="flex justify-center text-center text-yellow-200 py-4 ">
           <div className="text-slate-300 px-1">Venue Nexus</div> © All rights
           reserved.
         </footer>

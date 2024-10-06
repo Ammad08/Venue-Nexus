@@ -1,14 +1,34 @@
 
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { GiPartyPopper } from "react-icons/gi";
 import { GiBookCover } from "react-icons/gi";
 import { IoPeople } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
+
+  // Add conditional class based on the page path
+  const navbarClass = isLandingPage ? 'fixed top-0 left-0 w-full bg-white shadow-md z-50' :  'sticky top-0 bg-white shadow-md z-50 ';
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClick = (id) => {
+    if (location.pathname === '/') {
+      handleScroll(id);
+    } else {
+      window.location.href = `/#${id}`;
+    }
+  };
 
 
   const toggleMenu = () => {
@@ -21,18 +41,18 @@ const Navbar = () => {
  
  
   return (
-    <nav id="services" className="bg-slate-200 shadow-lg fixed w-full left-0 top-0   z-50  "
+    <nav id="services" className={navbarClass}
         >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 ">
+          <Link to="/" onClick={() => handleClick('home')} className="flex-shrink-0 ">
             <img
               className="h-20 w-28  rounded-3xl  "
               src="/logo1.png"
               alt="logo"
             />
-          </div>
+          </Link>
 
           {/* Hamburger menu for mobile */}
           <div className="-mr-2 flex items-center sm:hidden">
@@ -60,12 +80,12 @@ const Navbar = () => {
           {/* Navigation Menu */}
           <div className="hidden sm:flex sm:space-x-8">
             <Link
-              to="/"
+              to="/" onClick={() => handleClick('home')}
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+              // }}
             >
               Home
             </Link>
@@ -78,10 +98,10 @@ const Navbar = () => {
                 Services
               </button>
               {isDropdownOpen && (
-                <div className="absolute bg-[#153448]  left-0 mt-1 w-60  shadow-2xl rounded-3xl py-2 z-50">
+                <div className="absolute   bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200  left-0 mt-1 w-60  shadow-2xl rounded-3xl py-2 z-50">
                   <Link
                     to="/"
-                    className="block   px-4 py-2 text-white hover:bg-gray-800"
+                    className="block   px-4 py-2 text-black hover:bg-gray-300"
                   >
                     <div className="flex gap-4">
                       {" "}
@@ -94,7 +114,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-white hover:bg-gray-800"
+                    className="block px-4 py-2 text-black hover:bg-gray-300"
                   >
                     <div className="flex gap-4">
                       {" "}
@@ -105,7 +125,7 @@ const Navbar = () => {
 
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-white hover:bg-gray-800"
+                    className="block px-4 py-2 text-black hover:bg-gray-300"
                   >
                     <div className="flex gap-4">
                       {" "}
@@ -116,7 +136,7 @@ const Navbar = () => {
 
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-white hover:bg-gray-800"
+                    className="block px-4 py-2 text-black hover:bg-gray-300"
                   >
                     <div className="flex gap-4">
                       {" "}
@@ -128,22 +148,22 @@ const Navbar = () => {
               )}
             </div>
             <Link
-              to="/about"
+              to="/" onClick={() => handleClick('about')}
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+              // }}
             >
               About
             </Link>
             <Link
-              to="/contact"
+              to="/" onClick={() => handleClick('contact')}
               className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md "
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+              // }}
             >
               Contact
             </Link>
@@ -169,10 +189,10 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="sm:hidden px-2 pt-2 pb-3 space-y-1">
+        <div className="sm:hidden px-2 pt-2 pb-3 space-y-1 bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200">
           <Link
-            to="/"
-            className="block text-gray-800 font-bold hover:bg-gray-100 rounded-md px-3 py-2"
+            to="/" onClick={() => handleClick('home')}
+            className="block text-gray-800 font-bold hover:bg-gray-300 rounded-md px-3 py-2"
           >
             Home
           </Link>
@@ -183,10 +203,10 @@ const Navbar = () => {
             Services
           </button>
           {isDropdownOpen && (
-            <div className="space-y-1 pl-4 bg-[#153448] rounded-xl ">
+            <div className="space-y-1 pl-4 bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200 rounded-xl ">
               <Link
                 to="/all-venues"
-                className="block   px-4 py-2 text-white hover:bg-gray-800"
+                className="block   px-4 py-2 text-black hover:bg-gray-300"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -196,7 +216,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-white hover:bg-gray-800"
+                className="block px-4 py-2 text-black hover:bg-gray-300"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -207,7 +227,7 @@ const Navbar = () => {
 
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-white hover:bg-gray-800"
+                className="block px-4 py-2 text-black hover:bg-gray-300"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -218,7 +238,7 @@ const Navbar = () => {
 
               <Link
                 to="/all-venues"
-                className="block px-4 py-2 text-white hover:bg-gray-800"
+                className="block px-4 py-2 text-black hover:bg-gray-300"
               >
                 <div className="flex gap-4">
                   {" "}
@@ -229,22 +249,22 @@ const Navbar = () => {
             </div>
           )}
           <Link
-            to="/about"
+            to="/" onClick={() => handleClick('about')}
             className="block text-gray-800 font-bold hover:bg-white rounded-md px-3 py-2"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-            }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            // }}
           >
             About
           </Link>
           <Link
-            to="/contact"
+            to="/" onClick={() => handleClick('contact')}
             className="block text-gray-800 font-bold hover:bg-gray-100 rounded-md px-3 py-2"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-            }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            // }}
           >
             Contact
           </Link>

@@ -2,7 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    <>
+    {/* // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 */}
     <div className="contact-section bg-[#153448]  text-white py-20 px-4">
       <div className="max-w-2xl mx-auto text-center transition-all duration-1000 transform hover:scale-105 hover:shadow-xl animate-fadeInUp">
         <h2 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 animate-textGlow">
@@ -36,6 +37,7 @@ const Contact = () => {
         explicabo placeat rem amet ipsam sunt vel unde corrupti quam dolorum.
       </p>
     </div>
+    </>
   );
 };
 

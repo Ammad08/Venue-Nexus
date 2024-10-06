@@ -10,11 +10,13 @@ import About from "./components/About";
 
 import Contact2 from "./components/Contact2";
 import Contact from "./components/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
   return (
     <>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
