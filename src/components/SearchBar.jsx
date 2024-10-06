@@ -20,7 +20,7 @@ const SearchBar = () => {
 
   return (
     // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
-    <div className=" bg-[url('searchbg.jpg')] bg-cover bg-center max-h-screen bg-[#153448] mt-16   py-8">
+    <div className=" bg-[url('searchbg.jpg')] bg-cover bg-center max-h-screen  mt-16   py-8">
       {/* Outer Wrapper with background color */}
       <div className="max-w-lg mx-auto bg-white bg-opacity-40 p-6 rounded-2xl shadow-2xl">
         {/* Heading */}
