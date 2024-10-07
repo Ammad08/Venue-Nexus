@@ -44,7 +44,7 @@ const FAQs = () => {
         id="faqs"
       >
         <div className="py-10">
-          <h2 className="lg:text-6xl text-4xl font-normal relative lg:p-10 md:p-6 p-4">
+          <h2 className="lg:text-6xl text-4xl font-normal relative lg:p-10 md:p-6 p-4 transform transition duration-500 hover:scale-105">
             <span className="border-text text-black  absolute md:top-3 lg:top-4 top-0 lg:left-10">
               FREQUENTLY ASKED
             </span>
@@ -52,17 +52,17 @@ const FAQs = () => {
               QUESTIONS
             </span>
           </h2>
-          <p className="text-center w-full !text-black pt-6 md:pt-0 text-base md:text-[21px] font-[400]">
+          <p className="text-center w-full !text-black pt-6 md:pt-0 text-base md:text-[21px] font-[400] transform transition duration-500 hover:scale-105">
             We're dedicated to assisting individuals looking for perfect venue based on your preferences, availability, and location
             
           </p>
         </div>
         <div className="w-full flex items-center justify-center lg:px-10 md:px-6 px-4 ">
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center  ">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="w-full bg-white my-1 py-1 overflow-hidden rounded-xl borde border-black   hover:bg-gray-300 shadow-2xl   transition duration-500 "
+                className="w-full bg-white my-1 py-1 overflow-hidden rounded-xl borde border-black transform transition duration-500 hover:scale-105   hover:bg-gray-300 shadow-2xl   transition duration-500 "
               >
                 <div
                   className="rounded-sm w-full p-6 py-4 cursor-pointer transition-all duration-300 ease-in-out "

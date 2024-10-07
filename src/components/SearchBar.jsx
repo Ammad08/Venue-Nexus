@@ -24,15 +24,15 @@ const SearchBar = () => {
       {/* Outer Wrapper with background color */}
       <div className="max-w-lg bg-transparent mx-auto md:bg-white  md:bg-opacity-35 lg:bg-white  lg:bg-opacity-35 xl:bg-white  xl:bg-opacity-35 p-6 rounded-2xl  shadow-2xl">
         {/* Heading */}
-        <h1 className="text-2xl  md:text-3xl lg:text-3xl xl:text-3xl text-black font-serif font-semibold text-center mb-6">
+        <h1 className="text-2xl  md:text-3xl lg:text-3xl xl:text-3xl text-black font-serif font-semibold text-center mb-6 transform transition duration-300 hover:scale-110">
           Select Your Venue
         </h1>
 
         {/* Search Bar */}
-        <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-4">
+        <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-4 ">
           {/* Select City */}
           <select
-            className="w-full sm:w-1/2 p-2 font-serif border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full sm:w-1/2 p-2 font-serif border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transform transition duration-300 hover:scale-110"
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
           >
@@ -47,7 +47,7 @@ const SearchBar = () => {
 
           {/* Select Event Type */}
           <select
-            className="w-full sm:w-1/2 p-2 font-serif border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full sm:w-1/2 p-2 font-serif border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transform transition duration-300 hover:scale-110"
             value={selectedEventType}
             onChange={(e) => setSelectedEventType(e.target.value)}
           >
@@ -65,7 +65,7 @@ const SearchBar = () => {
         <div className="text-center">
           <button
             onClick={handleSearch}
-            className=" font-serif  bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500   text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=" font-serif  bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500   text-white px-6 py-2 rounded-xl font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transform transition duration-300 hover:scale-110"
           >
             Search Venue
           </button>

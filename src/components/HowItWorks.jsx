@@ -5,11 +5,11 @@ const HowItWorks = () => {
   return (
     <section className="bg-gradient-to-l from-slate-200 via-white to-slate-200  py-16" id="how-it-works">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 transform transition duration-500 hover:scale-105">How It Works</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Step 1 */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
             <div className="w-16 h-16 bg-indigo-500 text-white flex justify-center items-center rounded-full mb-6">
               <FaSearchLocation size={28} />
             </div>
@@ -20,7 +20,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
             <div className="w-16 h-16 bg-indigo-500 text-white flex justify-center items-center rounded-full mb-6">
               <FaRegCalendarCheck size={28} />
             </div>
@@ -31,7 +31,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
             <div className="w-16 h-16 bg-indigo-500 text-white flex justify-center items-center rounded-full mb-6">
               <FaCheckCircle size={28} />
             </div>

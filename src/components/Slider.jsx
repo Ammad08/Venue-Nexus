@@ -98,7 +98,7 @@ const Slider = () => {
         <div className="flex justify-between mx-5 ">
           <div>
             {" "}
-            <h2 className="text-xl   md:text-3xl lg:text-3xl xl:text-3xl    font-bold mb-4 font-serif ">
+            <h2 className="text-xl   md:text-3xl lg:text-3xl xl:text-3xl transform transition duration-300 hover:scale-110    font-bold mb-4 font-serif ">
               Most Popular Venues
             </h2>{" "}
           </div>
@@ -107,8 +107,8 @@ const Slider = () => {
               to="/all-venues"
               className="text-lg  font-semibold hover:underline"
             >
-              <div className="flex gap-2">
-                <div>View All</div>{" "}
+              <div className="flex gap-0 md:gap-2 lg:gap-2 xl:gap-2 transform transition duration-300 hover:scale-110">
+                <div className="flex  justify-between items-center min-w-max"> View All  </div>{" "}
                 <div className="text-3xl mt-0 ">
                   {" "}
                   <MdOutlineArrowRightAlt />
@@ -117,11 +117,11 @@ const Slider = () => {
             </Link>
           </div>
         </div>
-        <div className="flex space-x-4 overflow-x-scroll ">
+        <div className="flex space-x-4 overflow-x-scroll  ">
           {venues.map((venue) => (
             <div
               key={venue.id}
-              className="bg-zinc-100 rounded-lg shadow-md p-4 min-w-[300px]"
+              className="bg-zinc-100 rounded-lg shadow-md p-4 min-w-[300px]  transform transition duration-300 hover:scale-105"
             >
               <img
                 src={venue.image}

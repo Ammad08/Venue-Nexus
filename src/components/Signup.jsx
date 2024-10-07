@@ -60,25 +60,25 @@ const SignupPage = () => {
       
     >
       <div
-        className={` bg-transparent md:bg-slate-300 lg:bg-slate-300 xl:bg-slate-300 p-8 py-2 rounded-3xl shadow-2xl w-full max-w-sm  text-center transition-transform duration-1000 ${
+        className={` bg-white bg-opacity-50 p-8 py-2 rounded-3xl shadow-2xl w-full max-w-sm  text-center transition-transform duration-1000 ${
           showForm ? 'transform scale-100 opacity-100' : 'transform scale-75 opacity-0'
         }`}
       >
         {/* Logo */}
-        <div className="mb-2">
+        <div className="mb-2 transform transition duration-500 hover:scale-125">
           <img
             src="logo1.png"
             alt="Logo"
-            className="mx-auto h-20 w-20 md:h-32 md:w-32 lg:h-32 lg:w-32 xl:h-32 xl:w-32 bg-slate-200  md:bg-transparent lg:bg-transparent xl:bg-transparent rounded-2xl"
+            className="mx-auto h-20 w-20 md:h-32 md:w-32 lg:h-32 lg:w-32 xl:h-32 xl:w-32 bg-white bg-opacity-80 rounded-2xl"
           />
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold mb-6 mt-3 ">SIGNUP</h2>
+        <h2 className="text-3xl font-bold mb-6 mt-3transform transition duration-500 hover:scale-125 ">SIGNUP</h2>
 
         {/* Form */}
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+          <div className="mb-4 transform transition duration-500 hover:scale-105">
             <input
               type="text"
               placeholder="Name"
@@ -87,10 +87,10 @@ const SignupPage = () => {
               className="w-full p-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {errors.name && (
-              <p className="text-red-500 bg-slate-300 rounded-xl text-sm mt-1">{errors.name}</p>
+              <p className="text-red-500 bg-slate-300 rounded-xltransform transition duration-500 hover:scale-125 text-sm mt-1">{errors.name}</p>
             )}
           </div>
-          <div className="mb-4">
+          <div className="mb-4 transform transition duration-500 hover:scale-105">
             <input
               type="text"
               placeholder="Email"
@@ -102,7 +102,7 @@ const SignupPage = () => {
               <p className="text-red-500 bg-slate-300 rounded-xl text-sm mt-1">{errors.email}</p>
             )}
           </div>
-          <div className="mb-4">
+          <div className="mb-4 transform transition duration-500 hover:scale-105">
             <input
               type="password"
               placeholder="Password"
@@ -114,7 +114,7 @@ const SignupPage = () => {
               <p className="text-red-500 bg-slate-300 rounded-xl text-sm mt-1">{errors.password}</p>
             )}
           </div>
-          <div className="mb-6">
+          <div className="mb-6 transform transition duration-500 hover:scale-105">
             <input
               type="password"
               placeholder="Confirm Password"
@@ -128,16 +128,16 @@ const SignupPage = () => {
           </div>
           <button
             type="submit"
-            className='w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center'
+            className='w-full transform transition duration-500 hover:scale-105 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center'
           >
             Submit
           </button>
         </form>
 
         {/* Login Link */}
-        <p className="mt-4 text-gray-200 md:text-gray-600 lg:text-gray-600 xl:text-gray-600">
+        <p className="mt-4 text-gray-950 ">
           Already have an account?{' '}
-          <a href="/Login" className="text-blue-500 hover:underline">
+          <a href="/Login" className="text-red-600 hover:underline transform transition duration-500 hover:scale-105">
             Login
           </a>
         </p>

@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
     <section id="about" className=" relative rounded-t-3xl bg-[#153448]  text-white py-16 px-8">
-      <div className="max-w-4xl mx-auto px-8 text-center rounded-2xl shadow-2xl">
+      <div className="max-w-4xl mx-auto px-8 text-center rounded-2xl shadow-2xl transform transition duration-500 hover:scale-105">
         <h1 className="text-4xl font-bold mb-6">
           <span>Welcome to </span>
           <span className="text-yellow-300">

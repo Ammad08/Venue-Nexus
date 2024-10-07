@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" onClick={() => handleClick('home')} className="flex-shrink-0 ">
+          <Link to="/" onClick={() => handleClick('home')} className="flex-shrink-0  transform transition duration-300 hover:scale-110 ">
             <img
               className="h-20 w-28  rounded-3xl  "
               src="/logo1.png"
@@ -81,7 +81,7 @@ const Navbar = () => {
           <div className="hidden sm:flex sm:space-x-8">
             <Link
               to="/" onClick={() => handleClick('home')}
-              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
+              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  transform transition duration-300 hover:scale-110 "
               // onClick={(e) => {
               //   e.preventDefault();
               //   document.getElementById("home").scrollIntoView({ behavior: "smooth" });
@@ -94,19 +94,19 @@ const Navbar = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  ">
+              <button className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md   transform transition duration-300 hover:scale-110 ">
                 Services
               </button>
               {isDropdownOpen && (
                 <div className="absolute   bg-gradient-to-l from-slate-200 via-fuchsia-200 to-stone-200  left-0 mt-1 w-60  shadow-2xl rounded-3xl py-2 z-50">
                   <Link
                     to="/"
-                    className="block   px-4 py-2 text-black hover:bg-gray-300"
+                    className="block   px-4 py-2 text-black hover:bg-gray-200"
                   >
                     <div className="flex gap-4">
                       {" "}
                       <IoHome className="h-8 w-8" />
-                      <Link to="/all-venues" className="font-semibold">
+                      <Link to="/all-venues" className="font-semibold  transform transition duration-300 hover:scale-105">
                         {" "}
                         Wedding Venues
                       </Link>
@@ -114,9 +114,9 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-black hover:bg-gray-300"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
                   >
-                    <div className="flex gap-4">
+                    <div className="flex gap-4  transform transition duration-300 hover:scale-105">
                       {" "}
                       <GiPartyPopper className="h-8 w-8" />
                       <p className="font-semibold">Party Venues</p>
@@ -125,9 +125,9 @@ const Navbar = () => {
 
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-black hover:bg-gray-300"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
                   >
-                    <div className="flex gap-4">
+                    <div className="flex gap-4  transform transition duration-300 hover:scale-105">
                       {" "}
                       <GiBookCover className="h-8 w-8" />
                       <p className="font-semibold">Seminar Venues</p>
@@ -136,9 +136,9 @@ const Navbar = () => {
 
                   <Link
                     to="/all-venues"
-                    className="block px-4 py-2 text-black hover:bg-gray-300"
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
                   >
-                    <div className="flex gap-4">
+                    <div className="flex gap-4  transform transition duration-300 hover:scale-105">
                       {" "}
                       <IoPeople className="h-8 w-8 border rounded-full " />
                       <p className="font-semibold">Destination Wedding</p>
@@ -149,7 +149,7 @@ const Navbar = () => {
             </div>
             <Link
               to="/" onClick={() => handleClick('about')}
-              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  "
+              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md   transform transition duration-300 hover:scale-110"
               // onClick={(e) => {
               //   e.preventDefault();
               //   document.getElementById("about").scrollIntoView({ behavior: "smooth" });
@@ -159,7 +159,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/" onClick={() => handleClick('contact')}
-              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md "
+              className="text-gray-800 font-bold text-lg hover:text-blue-600 px-3 py-2 rounded-md  transform transition duration-300 hover:scale-110 "
               // onClick={(e) => {
               //   e.preventDefault();
               //   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
@@ -173,13 +173,13 @@ const Navbar = () => {
           <div className="hidden sm:flex sm:items-center sm:space-x-4">
             <Link
               to="/Login"
-              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center   "
+              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center  transform transition duration-300 hover:scale-110   "
             >
               Login
             </Link>
             <Link
               to="/Signup"
-              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center  "
+              className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-6 py-2 rounded-xl  text-center  transform transition duration-300 hover:scale-110 "
             >
               Sign Up
             </Link>

@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
     // bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
     <section className=" bg-gradient-to-l from-slate-200 via-fuchsia-200 to-slate-200     text-white py-12 md:py-24">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl text-black  md:text-4xl font-bold text-center mb-16 animate-fade-in-up">
+        <h2 className="text-3xl text-black  md:text-4xl font-bold text-center mb-16 transform transition duration-500 hover:scale-105">
           Why Choose Venue Nexus?
         </h2>
 
